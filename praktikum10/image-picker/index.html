@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            margin: 50px 350px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "aqua";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+        
+        function imagepicker() {
+            const list_image = ["beruang.png", "koala.png", "kucing.png", "kuda.png", "macan.png", "monyet.png"]
+            let pilihan = document.getElementById("option");
+            if(pilihan.value == "Beruang") {
+                let select = list_image[0];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar beruang.png")
+            }
+            
+
+            if(pilihan.value == "Koala") {
+                let select = list_image[1];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar koala.png")
+            }
+
+            if(pilihan.value == "Kuciing") {
+                let select = list_image[2];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar kucing.png")
+            }
+
+            if(pilihan.value == "Kuda") {
+                let select = list_image[3];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar kuda.png")
+            }
+
+            if(pilihan.value == "Macan") {
+                let select = list_image[4];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar macan.png")
+            }
+
+            if(pilihan.value == "Monyet") {
+                let select = list_image[5];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar monyet.png")
+            }
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Welcome to Fathimah Azzahrah's Image Picker</h1></a>
+    <hr>
+    <br>
+    <select id="option" onchange="imagepicker()">
+        <option value="" selected>Pilih Gambar</option>
+        <option value="Koala">Beruang</option>
+        <option value="Kucing">Koala</option>
+        <option value="Kuda">Kucing</option>
+        <option value="Macan">Kuda</option>
+        <option value="Monyet">Macan</option>
+        <option value="Beruang">Monyet</option>
+    </select>
+    <br>
+    <div class="container" id="container">
+        <div class="box" id="box">
+            <img id="image">
+        </div>
+    </div>
+
+
+</body>
+</html>
